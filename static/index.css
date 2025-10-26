@@ -1,0 +1,79 @@
+/* 💕 Estilo general */
+body {
+  background: linear-gradient(180deg, #ffe4ec, #ffd1dc);
+  font-family: 'Poppins', sans-serif;
+  color: #4a2c3a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 💝 Encabezado */
+header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #e91e63;
+  margin-bottom: 5px;
+  animation: fadeIn 2s ease;
+}
+
+header p {
+  color: #6d214f;
+  font-size: 1em;
+  animation: fadeIn 2.5s ease;
+}
+
+/* 💌 Cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(233, 30, 99, 0.15);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #ffd6e0;
+  animation: fadeInUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(233, 30, 99, 0.25);
+}
+
+/* 💞 Títulos de card */
+.card h2 {
+  color: #e91e63;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* 💘 Texto */
+.card p {
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
