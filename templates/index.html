@@ -8,6 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <div class="heart">💖</div>
+  <div class="heart">💗</div>
+  <div class="heart">💘</div>
+  <div class="heart">💓</div>
+  <div class="heart">💞</div>
+  <div class="heart">💝</div>
+  <div class="heart">💚</div>
+  <div class="heart">💓</div>
   <!-- 🌸 Música -->
   <audio id="loveSong" loop muted>
     <source src="{{ url_for('static', filename='music/Manuel Medrano - Bajo El Agua (Video Oficial).mp3') }}" type="audio/mpeg">
@@ -21,26 +30,40 @@
 
   <!-- 🌷 Contenedor principal -->
   <div class="container">
+    <!-- 💖 Card 1 -->
     <div class="card">
       <h2>Mi chinita linda🌹</h2>
-      <p>En cuanto a todo lo que eres, quiero decirte mi amor, que tu haz cambiado mucho mi ofrma de pensar y de soñar, cada cosa que se relaciona a ti incrementa mis metas contigo.</p>
+      <p>En cuanto a todo lo que eres, quiero decirte mi amor, que tu haz cambiado mucho mi forma de pensar y de soñar, cada cosa que se relaciona a ti incrementa mis metas contigo.</p>
       <p>🌷 Tulipanes | 🐱 Gatitos | 💌 2 meses</p>
+
+      <!-- Imagen romántica 1 -->
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='images/nosotros.jpg') }}" alt="Mi chinita linda" class="card-img">
+      </div>
     </div>
 
+    <!-- 📖 Card 2 -->
     <div class="card">
       <h2>Nuestra historia 📖</h2>
-      <p>Hace 2 meses empezó algo que jamás imaginé tan bonito: una conexión real pese a la distancia. Todo empezó con un mensaje —un poco borracho— donde te dije que me gustabas y muchas cosas sobre lo que queria, desde ese dia empezo un trato distinto y bonito, hasta que sin darnos cuenta ya nos complementabamos por completo . 💫</p>
+      <p>Hace 2 meses empezó algo que jamás imaginé tan bonito: una conexión real pese a la distancia. Todo empezó con un mensaje —un poco borracho— donde te dije que me gustabas y muchas cosas sobre lo que quería, desde ese día empezó un trato distinto y bonito. Hasta que sin darnos cuenta ya nos complementábamos por completo. Cada día desde que te conozco es más especial que el anterior. Recuerdo que en nuestra primera llamada casi no sabíamos de qué hablar, pero poco a poco fuimos conectando hasta volvernos inseparables. Empezaste a influir en mi día tras día hasta quedarte implantada en mi cabeza, y míranos ahora, dos locos perdidamente enamorados. 💫</p>
     </div>
 
+    <!-- 💕 Card 3 -->
     <div class="card">
       <h2>Lo que más amo de ti 💕</h2>
-      <p>Tu risa, la forma en que te emocionas por un gato, tu gusto por los tulipanes, y cómo conviertes momentos pequeños en recuerdos gigantes. 🌻</p>
+      <p>Tu risa, la forma en que te emocionas por un texto o una frase, tu gusto por los tulipanes, tus ojitos hermosos y brillantes, tu forma tan especial de ser y tus pequeños dramas. Me gusta todo de ti, desde tus lunares hasta tu forma de vestir. Eres mi sol y mi sueño viviente. Podría nombrar millones de cosas, pero todas llegan al conjunto de lo que eres tú. Me encanta tu forma de expresarme las cosas y cómo conviertes momentos pequeños en recuerdos gigantes. 🌻</p>
+
+      <!-- Imagen romántica 2 -->
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='images/isa.jpg') }}" alt="Lo que amo de ti" class="card-img">
+      </div>
     </div>
 
+    <!-- 💌 Card 4 -->
     <div class="card">
-      <h2>Mensaje especial (de Juan) 💌</h2>
-      <p>Ya no me son suficientes las palabras para expresar mis sentimientos hacia ti. Te has convertido en la razón más dulce de mis días. 💖</p>
-      <p><i>“Y así, quiero llamarte también mi princesa hermosa en vez alta algún día.” 💍</i></p>
+      <h2>Mensaje para mi futura esposa 💌</h2>
+      <p>"Ya no me son suficientes las palabras para expresar mis sentimientos hacia ti". Aquellas fueron las palabras con las que inicié el último texto que te hice, y lo sorprendente es que a día de hoy siguen siendo verídicas. Quisiera tenerte aquí junto a mí para poder darte todo el amor que no puedo darte a la distancia. Amor mío, deseo mucho estar a tu lado y agradezco muchísimo cada pequeña cosa que me das o que haces por mí. Eres mi complemento y mi razón de ser feliz. Espero poder compartir mucho más tiempo a tu lado y llevar una vida juntos. Te amo mucho y te amaré por siempre. Te has convertido en la razón más dulce de mis días. 💖</p>
+      <p><i>“Y así, quiero llamarte también mi esposa en voz alta algún día.” </i></p>
     </div>
   </div>
 

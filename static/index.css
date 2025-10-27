@@ -1,12 +1,42 @@
 /* 💕 Estilo general */
 body {
-  background: linear-gradient(180deg, #ffe4ec, #ffd1dc);
+  background: linear-gradient(180deg, #ffe6f2, #fff0f5);
   font-family: 'Poppins', sans-serif;
-  color: #4a2c3a;
+  color: #a16882;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
 }
+
+/* 🌹 Corazones animados */
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.3);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  color: #ff7eb9;
+  font-size: 25px;
+  animation: floatHearts 8s infinite ease-in;
+  opacity: 0.8;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 20px; }
+.heart:nth-child(2) { left: 25%; animation-delay: 2s; font-size: 30px; color: #ff4da6; }
+.heart:nth-child(3) { left: 40%; animation-delay: 4s; font-size: 24px; color: #ff85c0; }
+.heart:nth-child(4) { left: 60%; animation-delay: 1s; font-size: 28px; color: #ff99cc; }
+.heart:nth-child(5) { left: 80%; animation-delay: 3s; font-size: 35px; color: #ff66b2; }
+.heart:nth-child(6) { left: 50%; animation-delay: 5s; font-size: 22px; color: #ff99c8; }
+.heart:nth-child(7) { left: 70%; animation-delay: 6s; font-size: 27px; color: #ff5c8a; }
+.heart:nth-child(8) { left: 15%; animation-delay: 7s; font-size: 26px; color: #ffb3d9; }
 
 /* 💝 Encabezado */
 header {
@@ -16,55 +46,107 @@ header {
 
 header h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 3em;
+  font-size: 3.5em;
   color: #e91e63;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   animation: fadeIn 2s ease;
+  text-shadow: 0 0 10px rgba(239, 117, 158, 0.614);
 }
 
 header p {
-  color: #6d214f;
-  font-size: 1em;
+  color: #c16e9f;
+  font-size: 1.1em;
   animation: fadeIn 2.5s ease;
 }
 
-/* 💌 Cards */
+/* 🌸 Contenedor de Cards */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 35px;
   padding: 20px;
 }
 
+/* 💖 Cards */
 .card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(233, 30, 99, 0.15);
-  width: 280px;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 2px solid #ffd6e0;
+  background: linear-gradient(145deg, #fff, #ffe6f2);
+  border-radius: 25px;
+  border: 3px solid #ffd6e0;
+  box-shadow: 0 10px 30px rgba(239, 117, 158, 0.614);
+  width: 290px;
+  padding: 25px;
+  transition: all 0.4s ease;
   animation: fadeInUp 1s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(233, 30, 99, 0.25);
+/* Efecto decorativo en el borde del card */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ffb6c1, #e91e63, #a8e6cf);
+  z-index: 0;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.card:hover::before {
+  opacity: 0.6;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🌷 Imagen */
+.card-img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+  border: 4px solid #ffb6c1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 15px 35px rgba(255, 105, 180, 0.6);
 }
 
 /* 💞 Títulos de card */
 .card h2 {
   color: #e91e63;
   font-family: 'Great Vibes', cursive;
-  font-size: 1.8em;
+  font-size: 2em;
+  text-align: center;
   margin-bottom: 10px;
 }
 
-/* 💘 Texto */
+/* 🌿 Texto */
 .card p {
   line-height: 1.6;
-  font-size: 0.95em;
+  font-size: 1em;
+  color: #4a2c3a;
+  text-align: center;
+}
+
+.card small {
+  color: #bae5bd; /* Detalle verde suave */
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
 }
 
 /* ✨ Animaciones */
@@ -77,3 +159,5 @@ header p {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
